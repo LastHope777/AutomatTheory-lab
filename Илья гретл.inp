@@ -1,0 +1,33 @@
+# Запись истории команд начата 2024-06-06 19:37
+# Запись истории команд текущей сессии.  Учтите, что для запуска
+# этих команд в скрипте, возможно, придется внести некоторые изменения.
+open "C:\Users\Легенда доты\Pictures\ИДЗ ТИШКА.xlsx" \
+  --sheet=3
+corr X Y
+# модель 1
+ols Y 0 X
+# модель 2
+ols Y 0 X
+# модель 3
+ols Y 0 X --robust
+# store "C:\Users\Легенда доты\Pictures\AutomatTheory\ИДЗ ТИШКА.xlsx.gdt"
+# модель 3
+modtest --white
+modtest --breusch-pagan
+# модель 4
+hsk Y 0 X
+# модель 5
+hsk Y 0 X
+# модель 6
+ols Y 0 X --robust
+# модель 7
+ols Y 0 X
+# модель 8
+hsk Y 0 X
+# модель 9
+ols Y 0 X
+modtest --white
+# модель 10
+hsk Y 0 X
+# модель 11
+ols Y 0 X
